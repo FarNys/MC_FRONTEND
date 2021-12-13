@@ -41,7 +41,7 @@ const SingleCard = ({ item }) => {
     console.log(data, item);
   };
   const wishHandler = async (item) => {
-    const res = await fetch(`http://localhost:5000/allcards/${item._id}`, {
+    const res = await fetch(`${baseURL}/allcards/${item._id}`, {
       method: "PATCH",
       headers: {
         "x-auth-token": localStorage.getItem("token"),
