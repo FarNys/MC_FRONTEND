@@ -13,14 +13,14 @@
   min-width: 350px;
   margin-top: 50px;
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
-  background-color: white;
+  background-color: $color_4;
   h1 {
     font-family: $font_2;
     text-align: center;
     padding: 20px;
     font-size: 22px;
     width: 100%;
-    color: white;
+    color: $color_4;
     background: linear-gradient(65deg, $color_1, $color_2, $color_3);
   }
 }
@@ -58,7 +58,7 @@
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  color: white;
+  color: $color_4;
   border: none;
   outline: none;
   font-size: 16px;
@@ -95,7 +95,7 @@
   z-index: 1000;
   width: fit-content;
   border-radius: 6px;
-  background-color: white;
+  background-color: $color_4;
   color: #09b333;
   border: 2px solid #09b333;
   h4 {

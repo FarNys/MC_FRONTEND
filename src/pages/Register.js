@@ -48,48 +48,51 @@ const Register = () => {
   };
 
   return (
-    <div className="register_container">
-      {alert && <h5>{alert.msg}</h5>}
-      {successState && <h5>{success}</h5>}
-      <h3>Create Account</h3>
-      <form>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="name"
-          onChange={onChange}
-          required
-          value={userInfo.name}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          name="email"
-          placeholder="email"
-          onChange={onChange}
-          required
-          value={userInfo.email}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="password"
-          onChange={onChange}
-          required
-          value={userInfo.password}
-        />
-        <button onClick={createAccount} type="submit">
-          Create Account
-        </button>
-      </form>
-      <h6>
-        If You Have Already an Account{" "}
-        <li>
-          <Link to="/login">Click</Link> here .
-        </li>
-      </h6>
+    <div className="register_page_container">
+      <div className="register_container">
+        {alert && <h5>{alert.msg}</h5>}
+        {successState && <h5>{success}</h5>}
+        <h3>Create Account</h3>
+        <form>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="name"
+            onChange={onChange}
+            required
+            value={userInfo.name}
+          />
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="email"
+            onChange={onChange}
+            required
+            value={userInfo.email}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            onChange={onChange}
+            required
+            value={userInfo.password}
+          />
+          <button onClick={createAccount} type="submit">
+            Create Account
+          </button>
+        </form>
+        <div className="under_creat_account">
+          If You Have Already an Account{" "}
+          <li>
+            <Link to="/login">Click</Link>
+          </li>
+          here
+        </div>
+      </div>
     </div>
   );
 };

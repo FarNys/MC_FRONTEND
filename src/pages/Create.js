@@ -121,15 +121,15 @@ const Create = () => {
     }
   };
 
-  if (loading)
-    return (
-      <Loader
-        type="bubble-loop"
-        bgColor={"#c33764"}
-        color={"#c33764"}
-        size={50}
-      />
-    );
+  // if (loading)
+  //   return (
+  //     <Loader
+  //       type="bubble-loop"
+  //       bgColor={"#c33764"}
+  //       color={"#c33764"}
+  //       size={50}
+  //     />
+  //   );
 
   return (
     <div className="create_card_container">
@@ -221,9 +221,20 @@ const Create = () => {
         {arrNum.length > 0 && (
           <button onClick={removeFieldHandler}>Remove all fields</button>
         )}
-        <button className="save_btn" onClick={saveHandler} type="submit">
-          Create
-        </button>
+        {loading ? (
+          <div className="loader_container">
+            <Loader
+              type="bubble-loop"
+              bgColor={"#c33764"}
+              color={"#c33764"}
+              size={50}
+            />
+          </div>
+        ) : (
+          <button className="save_btn" onClick={saveHandler} type="submit">
+            Create
+          </button>
+        )}
       </form>
     </div>
   );

@@ -37,30 +37,39 @@ const Wishlist = () => {
 
   // const dispatch = useDispatch();
 
-  if (loading)
-    return (
-      <Loader
-        type="bubble-loop"
-        bgColor={"#c33764"}
-        color={"#c33764"}
-        size={50}
-      />
-    );
+  // if (loading)
+  //   return (
+  //     <Loader
+  //       type="bubble-loop"
+  //       bgColor={"#c33764"}
+  //       color={"#c33764"}
+  //       size={50}
+  //     />
+  //   );
   return (
     <div className="allcard_container">
-      <div className="allcard_container_inner">
-        {wishCards.length > 0 ? (
-          wishCards.map((item) => {
-            return <SingleCard item={item} key={item._id} />;
-          })
-        ) : (
-          <ul>
-            <li>
-              <h3>No Wish Card</h3>
-            </li>
-          </ul>
-        )}
-      </div>
+      {loading ? (
+        <Loader
+          type="bubble-loop"
+          bgColor={"#c33764"}
+          color={"#c33764"}
+          size={50}
+        />
+      ) : (
+        <div className="allcard_container_inner">
+          {wishCards.length > 0 ? (
+            wishCards.map((item) => {
+              return <SingleCard item={item} key={item._id} />;
+            })
+          ) : (
+            <ul>
+              <li>
+                <h3>No Wish Card</h3>
+              </li>
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   );
 };

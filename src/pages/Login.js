@@ -67,45 +67,54 @@ const Login = () => {
       setloading(false);
     }
   };
-  if (loading) {
-    return (
-      <Loader
-        type="bubble-loop"
-        bgColor={"#c33764"}
-        color={"#c33764"}
-        size={50}
-      />
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <Loader
+  //       type="bubble-loop"
+  //       bgColor={"#c33764"}
+  //       color={"#c33764"}
+  //       size={50}
+  //     />
+  //   );
+  // }
   return (
     <div className="login_container_box">
-      <div className="login_container">
-        <Fade top>
-          <div className="alert_container">
-            {alert && <h4>Email Or Password is Wrong!</h4>}
-          </div>
-        </Fade>
-        <h3>Login</h3>
-        <form>
-          <label htmlFor="password">Email</label>
-          <input
-            type="text"
-            placeholder="email"
-            name="email"
-            onChange={onChange}
-            value={user.email}
-          />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            placeholder="password"
-            name="password"
-            onChange={onChange}
-            value={user.password}
-          />
-          <button onClick={loginHandler}>Login</button>
-        </form>
-      </div>
+      {loading ? (
+        <Loader
+          type="bubble-loop"
+          bgColor={"#c33764"}
+          color={"#c33764"}
+          size={50}
+        />
+      ) : (
+        <div className="login_container">
+          <Fade top>
+            <div className="alert_container">
+              {alert && <h4>Email Or Password is Wrong!</h4>}
+            </div>
+          </Fade>
+          <h3>Log in to your account</h3>
+          <form>
+            <label htmlFor="password">Email</label>
+            <input
+              type="text"
+              placeholder="email"
+              name="email"
+              onChange={onChange}
+              value={user.email}
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              placeholder="password"
+              name="password"
+              onChange={onChange}
+              value={user.password}
+            />
+            <button onClick={loginHandler}>Login</button>
+          </form>
+        </div>
+      )}
     </div>
   );
 };

@@ -50,22 +50,26 @@ const DynamicPage = () => {
 
   if (loading) {
     return (
-      <Loader
-        type="bubble-loop"
-        bgColor={"#c33764"}
-        color={"#c33764"}
-        size={50}
-      />
+      <div className="loader_container">
+        <Loader
+          type="bubble-loop"
+          bgColor={"#c33764"}
+          color={"#c33764"}
+          size={50}
+        />
+      </div>
     );
   }
   if (!cardData) {
     return (
-      <Loader
-        type="bubble-loop"
-        bgColor={"#c33764"}
-        color={"#c33764"}
-        size={50}
-      />
+      <div className="loader_container">
+        <Loader
+          type="bubble-loop"
+          bgColor={"#c33764"}
+          color={"#c33764"}
+          size={50}
+        />
+      </div>
     );
   } else {
     return (

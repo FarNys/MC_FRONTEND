@@ -1,32 +1,49 @@
+@import "../index.scss";
+.register_page_container,
+.login_container_box {
+  padding: 50px 0;
+  min-height: 80vh !important;
+  background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+}
 .register_container,
 .login_container {
   display: flex;
-  margin: 100px auto;
+  margin: 0 auto;
   flex-direction: column;
   width: 400px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 2px $color_3;
   position: relative;
+  background-color: $color_4;
+
   h5 {
     position: absolute;
     color: #c33764;
     top: -50px;
   }
-  h6 {
-    margin: 10px;
-    width: 100%;
-    text-align: center;
+  .under_creat_account {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    font-family: $font_1;
+    color: $color_1;
+    // width: 100%;
     li {
       list-style: none;
+      width: fit-content;
+      border-bottom: 1px solid $color_3;
+      padding: 0 5px;
       a {
         text-decoration: none;
-        color: #c33764;
+        color: $color_3;
       }
     }
   }
   h3 {
     margin-top: 20px;
+    color: $color_1;
   }
   //   height: 100vh;
 }
@@ -37,11 +54,12 @@ form {
   padding: 17px;
   input {
     padding: 8px 12px;
-    border: 1px solid #1d2671;
+    border: 1px solid $color_2;
     outline: none;
     font-weight: 600;
+    font-family: $font_1;
     &:focus {
-      border: 1px solid #c33764;
+      border: 1px solid $color_3;
     }
   }
   label {
@@ -50,17 +68,20 @@ form {
     font-weight: 600;
   }
   button {
-    margin-top: 20px;
+    margin: 30px 0;
     padding: 12px;
-    background: linear-gradient(65deg, #c33764, #1d2671);
     border: none;
     outline: none;
     color: white;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    background-color: $color_2;
     &:hover {
-      opacity: 0.95;
+      background: lighten($color_2, 10%);
+    }
+    &:active {
+      background: lighten($color_2, 20%);
     }
   }
 }
@@ -68,7 +89,7 @@ form {
   border-radius: 6px;
   position: absolute;
   top: -80px;
-  background-color: white;
+  background-color: $color_4;
   color: #c33764;
   h4 {
     padding: 8px 12px;

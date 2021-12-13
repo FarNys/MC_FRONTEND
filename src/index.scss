@@ -23,7 +23,13 @@ $color_5: #d3d3d3;
 $color_6: #fefefe;
 $color_7: #fefefe;
 $color_8: #090979;
-
+.loader_container {
+  margin: auto;
+  display: flex;
+  border: none !important;
+  justify-content: center;
+  align-items: center;
+}
 // @function fontChanger($a) {
 //   @return ($a)/40;
 // }

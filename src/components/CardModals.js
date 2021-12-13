@@ -6,6 +6,8 @@ import { filterForEdit, setCard } from "../features/cardSlice";
 import { useDispatch } from "react-redux";
 import { Fade } from "react-reveal";
 import { baseURL } from "../App";
+import Loader from "react-js-loader";
+
 const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
   const [success, setsuccess] = useState(false);
   const dispatch = useDispatch();
@@ -99,8 +101,22 @@ const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
           <label htmlFor="extra2">Extra2</label>
           <input type="text" name="extra2" value={extra2} onChange={onChange} />
         </div>
-        {loading ? (
+        {/* {loading ? (
           <LoaderButton />
+        ) : (
+          <button className="save_btn" onClick={updateHandler} type="submit">
+            Update Card
+          </button>
+        )} */}
+        {loading ? (
+          <div className="loader_container">
+            <Loader
+              type="bubble-loop"
+              bgColor={"#c33764"}
+              color={"#c33764"}
+              size={50}
+            />
+          </div>
         ) : (
           <button className="save_btn" onClick={updateHandler} type="submit">
             Update Card

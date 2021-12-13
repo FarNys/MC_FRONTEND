@@ -36,30 +36,46 @@ const AllCards = () => {
     };
     fetchData();
   }, [dispatch]);
-  if (loading)
-    return (
-      <Loader
-        type="bubble-loop"
-        bgColor={"#c33764"}
-        color={"#c33764"}
-        size={50}
-      />
-    );
+  // if (loading)
+  //   return (
+  //     <Loader
+  //       type="bubble-loop"
+  //       bgColor={"#c33764"}
+  //       color={"#c33764"}
+  //       size={50}
+  //     />
+  //   );
 
   return (
     <div className="allcard_container">
-      <States />
-      <Blobs blobClass={"blobs_one"} />
-      <Blobs blobClass={"blobs_two"} />
-      <div className="allcard_container_inner">
-        {myCards.length > 0 ? (
-          myCards.map((item) => {
-            return <SingleCard item={item} key={item._id} />;
-          })
-        ) : (
-          <h3>No Card yet!</h3>
-        )}
-      </div>
+      {loading ? (
+        <Loader
+          type="bubble-loop"
+          bgColor={"#c33764"}
+          color={"#c33764"}
+          size={50}
+        />
+      ) : (
+        <>
+          <States />
+          <Blobs blobClass={"blobs_one"} />
+          <Blobs blobClass={"blobs_two"} />
+          <div className="allcard_container_inner">
+            {myCards.length > 0 ? (
+              myCards.map((item) => {
+                return <SingleCard item={item} key={item._id} />;
+              })
+            ) : (
+              <ul>
+                <li>
+                  {" "}
+                  <h3>No Card yet!</h3>
+                </li>
+              </ul>
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };
