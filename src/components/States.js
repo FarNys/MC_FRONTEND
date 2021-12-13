@@ -10,7 +10,7 @@ const States = () => {
   const countAllCards = useSelector(selectCard);
   const countAllWish = useSelector(selectWishCard);
   useEffect(() => {
-    if (countAllCards) {
+    if (countAllCards.length > 0) {
       const timerElement = new Date(
         countAllCards[countAllCards.length - 1].mytimestamp
       );
@@ -42,8 +42,8 @@ const States = () => {
         <div className="icon_state">
           <AiFillHeart />
         </div>
-        <div className="icon_name">{countAllWish.length}</div>
-        <div className="info_state">3</div>
+        <div className="icon_name">Favorite Cards</div>
+        <div className="info_state">{countAllWish.length}</div>
       </div>
       <div className="stats_container">
         <div className="icon_state">

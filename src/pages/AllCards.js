@@ -58,8 +58,8 @@ const AllCards = () => {
       ) : (
         <>
           <States />
-          <Blobs blobClass={"blobs_one"} />
-          <Blobs blobClass={"blobs_two"} />
+          {/* <Blobs blobClass={"blobs_one"} />
+          <Blobs blobClass={"blobs_two"} /> */}
           <div className="allcard_container_inner">
             {myCards.length > 0 ? (
               myCards.map((item) => {
