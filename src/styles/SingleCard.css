@@ -1,0 +1,399 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Carrois Gothic SC", sans-serif;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
+.allcard_container {
+  min-height: 90vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background: linear-gradient(65deg, #00d4ff, #020024);
+}
+
+.allcard_container .blobs_one {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: transparent;
+  left: 50px;
+  top: 40%;
+  -webkit-animation-name: blobAnime;
+          animation-name: blobAnime;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes blobAnime {
+  0% {
+    top: 40%;
+  }
+  50% {
+    top: 45%;
+  }
+  100% {
+    top: 40%;
+  }
+}
+
+@keyframes blobAnime {
+  0% {
+    top: 40%;
+  }
+  50% {
+    top: 45%;
+  }
+  100% {
+    top: 40%;
+  }
+}
+
+.allcard_container .blobs_two {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  right: 0px;
+  top: 20%;
+  -webkit-animation-name: blobAnimeTwo;
+          animation-name: blobAnimeTwo;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes blobAnimeTwo {
+  0% {
+    top: 20%;
+  }
+  50% {
+    top: 80%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes blobAnimeTwo {
+  0% {
+    top: 20%;
+  }
+  50% {
+    top: 80%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+.allcard_container .allcard_container_stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #020024;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 6px 1px #00d4ff;
+          box-shadow: 0 1px 6px 1px #00d4ff;
+  margin-right: 20px;
+}
+
+.allcard_container .allcard_container_stats .stats_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 40px 25px 25px;
+  width: 100%;
+  border-bottom: 1px solid #00d4ff;
+}
+
+.allcard_container .allcard_container_stats .stats_container .icon_state {
+  color: #00d4ff;
+  font-size: 22px;
+}
+
+.allcard_container .allcard_container_stats .stats_container .icon_name {
+  color: #fefefe;
+  font-family: "Readex Pro", sans-serif;
+  padding-left: 5px;
+}
+
+.allcard_container .allcard_container_stats .stats_container .info_state {
+  color: #fefefe;
+  font-family: "Readex Pro", sans-serif;
+  padding-left: 5px;
+}
+
+.allcard_container .allcard_container_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px;
+  max-width: 1000px;
+  width: 95%;
+  border: 2px solid #090979;
+  border-radius: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.allcard_container ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.allcard_container .option_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.allcard_container .option_container p {
+  padding: 5px 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #347cda;
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.allcard_container .option_container p:hover {
+  cursor: pointer;
+  background-color: #347cda;
+  color: #fefefe;
+}
+
+.singlecard_container {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 175px;
+  border: 1px solid #fefefe;
+  margin: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0px 6px #00d4ff;
+          box-shadow: 0 0px 6px #00d4ff;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.singlecard_container:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.singlecard_container .singlecard_img {
+  width: 100%;
+}
+
+.singlecard_container .singlecard_img img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.singlecard_container .singlecard_desc {
+  margin-top: -8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  background-color: #090979;
+  color: #fefefe;
+}
+
+.singlecard_container .singlecard_desc p {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  font-family: "Carrois Gothic SC", sans-serif;
+}
+
+.singlecard_container .singlecard_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fefefe;
+  width: 100%;
+}
+
+.singlecard_container .singlecard_bottom a {
+  text-decoration: none;
+  color: #fefefe;
+  background-color: #090979;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.singlecard_container .singlecard_bottom a:hover {
+  color: #090979;
+  background-color: #fefefe;
+}
+
+.singlecard_container .singlecard_bottom button {
+  width: 100%;
+  padding: 8px;
+  color: #fefefe;
+  background-color: #090979;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  z-index: 100;
+}
+
+.singlecard_container .singlecard_bottom button:hover {
+  color: #090979;
+  background-color: #fefefe;
+}
+
+.wish_btn_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.wish_btn_container .wishlist_icon {
+  width: 25%;
+}
+
+.wish_btn_container .wishlist_icon button {
+  pointer-events: none;
+}
+
+.wish_btn_container .wishlist_icon .icon_yellow {
+  color: red;
+}
+
+.singlecard_container.active {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+@media (max-width: 600px) {
+  .singlecard_container {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 1293px) {
+  .blobs_one {
+    top: 100px !important;
+    left: 50px;
+  }
+  .blobs_two {
+    top: 100px !important;
+    right: 100px !important;
+  }
+  .allcard_container_inner {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .blobs_two {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .blobs_one {
+    display: none;
+  }
+}
+/*# sourceMappingURL=SingleCard.css.map */

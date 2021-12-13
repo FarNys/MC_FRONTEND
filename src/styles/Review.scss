@@ -1,0 +1,154 @@
+.review_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px auto;
+  padding: 20px 0 70px 0;
+  overflow: hidden;
+  // background: linear-gradient(to bottom, #180118 40%, #ddd 20%, #ddd 40%);
+  &:hover {
+    .review_button_container {
+      display: flex;
+    }
+  }
+}
+.review_box,
+.review_parent {
+  position: relative;
+  width: 250px;
+  // margin-top: 10px;
+  // margin-bottom: 10px;
+}
+.review_parent {
+  width: 750px;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #180118 30%,
+    transparent 30%,
+    transparent 40%
+  );
+}
+.review_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.single_review_container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+  border: 1px solid #ddd;
+  letter-spacing: 1px;
+  // margin: auto;
+  transform: translateX(-250px);
+  transition: 0.3s ease all;
+  &:hover {
+    cursor: pointer;
+    background-color: #180118;
+    color: #ddd;
+    .socialmedia_icon_whatssapp {
+      transform: translateX(0);
+      color: rgb(32, 184, 32);
+    }
+    .socialmedia_icon_twitter {
+      transform: translateX(0);
+      color: rgb(71, 174, 221);
+    }
+  }
+  .review_top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 30px;
+    background-color: #180118;
+    .review_images {
+      width: 100px;
+      height: 130px;
+      object-fit: cover;
+      padding: 3px;
+      margin-top: 30px;
+      background-color: #ddd;
+    }
+  }
+  .review_bottom {
+    margin-top: 110px;
+    width: 100%;
+    h3 {
+      padding-top: 30px;
+      text-align: center;
+    }
+    p {
+      padding: 15px;
+      font-weight: 600;
+    }
+  }
+}
+.review_button_container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  transform: translateX(-50%);
+  display: none;
+  .btn_box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+
+    button {
+      cursor: pointer;
+      background: #ddd;
+      color: #180118;
+      outline: none;
+      border: none;
+      padding: 4px;
+      border-radius: 50%;
+      transform: scale(1.5);
+      transition: 0.3s ease all;
+      &:hover {
+        background-color: #180118;
+        color: #ddd;
+      }
+      &:active {
+        transform: scale(1.45);
+      }
+    }
+  }
+}
+.review_socialmedia {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 30px;
+  left: 20px;
+  // color: white;
+}
+.socialmedia_icon_whatssapp {
+  transform: translateX(-20px);
+  transition: 0.3s ease transform;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.socialmedia_icon_twitter {
+  transform: translateX(-20px);
+  transition: 0.3s ease transform;
+  &:hover {
+    opacity: 0.7;
+  }
+}

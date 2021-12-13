@@ -1,0 +1,82 @@
+@import "../index.scss";
+.navbar_container {
+  display: flex;
+  height: 60px;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  background-color: $color_2;
+  //   background: linear-gradient(65deg, $color_2, #1d2671);
+}
+.nav_left {
+  width: 70px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  a {
+    text-decoration: none;
+    color: $color_4;
+  }
+}
+.nav_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li {
+    margin: 3px;
+    list-style: none;
+    a {
+      text-decoration: none;
+      padding: 10px;
+      font-weight: 600;
+      color: $color_4;
+      transition: 0.2s ease-in-out;
+    }
+    &:hover {
+      a {
+        background: $color_4;
+        color: $color_2;
+      }
+    }
+  }
+}
+.nav_right {
+  padding-right: 10px;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $color_4;
+    }
+  }
+}
+.user_logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    background-color: $color_4;
+    border: 1px solid $color_4;
+    color: $color_2;
+    outline: none;
+    padding: 6px;
+    margin-left: 3px;
+    cursor: pointer;
+    &:hover {
+      color: $color_4;
+      background-color: transparent;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .navbar_container {
+    font-size: 0.8rem;
+    // max-width: 320px;
+  }
+}

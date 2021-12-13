@@ -1,0 +1,53 @@
+@import "../index.scss";
+.loginComp_container {
+  background-color: $color_3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  .loginComp_container_left {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: $color_1;
+    p {
+      font-family: $font_1;
+    }
+
+    .icon_finger {
+      color: $color_1;
+      margin: 5px;
+      font-size: 26px;
+    }
+  }
+
+  .register_conteiner {
+    border-radius: 12px;
+    background-color: $color_2;
+    text-decoration: none;
+    font-weight: 600;
+    color: $color_4;
+    padding: 12px 16px;
+    &:hover {
+      background-color: lighten($color_2, 10%);
+    }
+    &:active {
+      background-color: lighten($color_2, 20%);
+    }
+  }
+}
+@media (max-width: 600px) {
+  .loginComp_container {
+    flex-direction: column;
+    .register_conteiner {
+      margin-top: 20px;
+    }
+  }
+  .loginComp_container_left {
+    .icon_finger {
+      transform: rotate(90deg);
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.loader_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader_inner {
+  margin: 50px 10px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c33764;
+  border-radius: 50%;
+  -webkit-animation: loader_anime;
+          animation: loader_anime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.loader_inner:nth-child(2) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes loader_anime {
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes loader_anime {
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+.link_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link_container a {
+  text-decoration: none;
+  padding: 9px 25px;
+  margin-top: 20px;
+  color: white;
+  background: linear-gradient(65deg, #c33764, #1d2671);
+  border: 1px solid transparent;
+  font-weight: 600;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+.link_container a:hover {
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  color: #c33764;
+  border: 1px solid #c33764;
+  background: transparent;
+}
+
+.loaderbutton_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(65deg, #c33764, #1d2671);
+}
+
+.loader_button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 2px solid white;
+  -webkit-animation-name: loaderbuttonAnimate;
+          animation-name: loaderbuttonAnimate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes loaderbuttonAnimate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderbuttonAnimate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=Loader.css.map */

@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+$font_1: "Readex Pro", sans-serif;
+$font_2: "Carrois Gothic SC", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font_2;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
+$color_1: #020024;
+$color_2: #090979;
+$color_3: #00d4ff;
+$color_4: #fefefe;
+$color_5: #d3d3d3;
+$color_6: #fefefe;
+$color_7: #fefefe;
+$color_8: #090979;
+
+// @function fontChanger($a) {
+//   @return ($a)/40;
+// }
+// @mixin flexBOX($flex-dir, $horizonal, $vertical, $scale) {
+//   display: flex;
+//   flex-direction: $flex-dir;
+//   justify-content: $horizonal;
+//   align-items: $vertical;
+//   transition: 0.3s;
+//   &:hover {
+//     color: blue;
+//     transform: scale($scale);
+//   }
+// }

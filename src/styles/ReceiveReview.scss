@@ -1,0 +1,128 @@
+@import "../index.scss";
+
+.receivieReview_container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  width: 100%;
+  // padding: 20px 0;
+  padding-bottom: 60px;
+  margin-top: 0;
+  background-color: $color_1;
+  h1 {
+    text-align: center;
+    margin: 50px auto 20px auto;
+    width: fit-content;
+    color: $color_3;
+  }
+  .receive_items {
+    // background-color: rgba(0, 0, 0, 0.3);
+    color: $color_1;
+    width: 90%;
+    max-width: 1200px;
+    // min-width: 330px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+
+    .slick-arrow {
+      margin-left: 40px;
+      z-index: 100;
+      margin-right: 40px;
+    }
+    .slick-dots {
+      top: 120px;
+      margin-top: 135px;
+      button {
+        background-color: $color_3;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+    }
+    .carousel_item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-right: 10px !important;
+      padding-left: 10px;
+      .review_icon_info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        background-color: $color_3;
+        border-radius: 12px 12px 0 0;
+        padding: 15px;
+        // flex-wrap: wrap;
+        .review_icon_container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          padding: 5px;
+          background-color: $color_1;
+          // .reviews_icons {
+          //   color: $color_3;
+          //   font-size: 3rem;
+          // }
+          img {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+          }
+        }
+        .review_info_container {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          h4 {
+            padding: 0 5px;
+            margin-left: 5px;
+          }
+          span {
+            padding: 0 5px;
+            display: flex;
+            font-size: 12px;
+            margin-left: 5px;
+            font-family: $font_1;
+          }
+        }
+      }
+      .review_desc_time {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: $color_3;
+        border-radius: 0 0 12px 12px;
+        padding-top: 5px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 0;
+          width: 80%;
+          height: 3px;
+          background-color: $color_1;
+        }
+        p {
+          padding: 15px 25px;
+          font-family: $font_1;
+        }
+        span {
+          width: 100%;
+          text-align: right;
+          padding: 5px 25px;
+          font-size: 11px;
+          color: $color_2;
+          font-family: $font_1;
+        }
+      }
+    }
+  }
+}

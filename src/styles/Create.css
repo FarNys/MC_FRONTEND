@@ -1,0 +1,253 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Carrois Gothic SC", sans-serif;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
+.create_card_container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create_card_container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+  -webkit-clip-path: circle(90vh at 100% -20vh);
+          clip-path: circle(90vh at 100% -20vh);
+  z-index: -1;
+}
+
+.create_card_container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+  -webkit-clip-path: circle(60vh at 20% 100vh);
+          clip-path: circle(60vh at 20% 100vh);
+  z-index: -1;
+}
+
+.create_card_container .alert_container {
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #c33764;
+  top: 0;
+}
+
+.create_card_container .alert_container h4 {
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fefefe;
+}
+
+.create_card_container .alert_container.succes {
+  z-index: 100;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #09b333;
+  top: 0;
+}
+
+.create_card_container .alert_container.succes h4 {
+  padding: 8px 12px;
+  border: none;
+  color: #fefefe;
+}
+
+.memory_card_container {
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 25%;
+  min-width: 340px;
+  margin: 40px auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 50px;
+  -webkit-box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.4);
+  background-color: #fefefe;
+}
+
+.memory_card_container h1 {
+  font-family: "Carrois Gothic SC", sans-serif;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+  width: 100%;
+  color: #fefefe;
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+}
+
+.memory_card_container button {
+  background: #090979;
+}
+
+.memory_card_container button:hover {
+  background: #0d0da8;
+}
+
+.memory_card_container button:active {
+  background: #1010d8;
+}
+
+.single_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 5px;
+}
+
+.single_container label {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single_container input {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  padding: 6px 8px;
+  width: 100%;
+  border: 1px solid #020024;
+  outline: none;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 400;
+}
+
+.single_container input:focus {
+  border: 1px solid #00d4ff;
+}
+
+.single_container span {
+  margin-left: 5px;
+}
+
+.icon_error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+}
+
+.save_btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #090979;
+  color: #fefefe;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.save_btn:hover {
+  background: #0d0da8;
+}
+
+.save_btn:active {
+  background: #1010d8;
+}
+
+.span_error {
+  color: #c33764;
+  font-size: 12px;
+  padding-top: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=Create.css.map */

@@ -1,0 +1,115 @@
+.register_container,
+.login_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 100px auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.register_container h5,
+.login_container h5 {
+  position: absolute;
+  color: #c33764;
+  top: -50px;
+}
+
+.register_container h6,
+.login_container h6 {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.register_container h6 li,
+.login_container h6 li {
+  list-style: none;
+}
+
+.register_container h6 li a,
+.login_container h6 li a {
+  text-decoration: none;
+  color: #c33764;
+}
+
+.register_container h3,
+.login_container h3 {
+  margin-top: 20px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 17px;
+}
+
+form input {
+  padding: 8px 12px;
+  border: 1px solid #1d2671;
+  outline: none;
+  font-weight: 600;
+}
+
+form input:focus {
+  border: 1px solid #c33764;
+}
+
+form label {
+  padding: 5px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background: linear-gradient(65deg, #c33764, #1d2671);
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+form button:hover {
+  opacity: 0.95;
+}
+
+.alert_container {
+  border-radius: 6px;
+  position: absolute;
+  top: -80px;
+  background-color: white;
+  color: #c33764;
+}
+
+.alert_container h4 {
+  padding: 8px 12px;
+  border: 1px solid #c33764;
+  border-radius: 8px;
+}
+
+.login_container_box {
+  min-height: 525px;
+}
+/*# sourceMappingURL=Register.css.map */

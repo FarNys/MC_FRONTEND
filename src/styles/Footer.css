@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Carrois Gothic SC", sans-serif;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
+.footer_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  border-top: 1px solid #1d2671;
+  background: linear-gradient(65deg, #180118, #270427, #180118);
+}
+
+.footer_column {
+  margin: 10px;
+}
+
+.footer_column h4 {
+  margin-bottom: 10px;
+  color: #09b333;
+}
+
+.footer_column li {
+  list-style: none;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.footer_column li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer_column li a::before {
+  content: "";
+  position: absolute;
+  left: -130%;
+  bottom: -5%;
+  height: 3px;
+  width: 100%;
+  background-color: #09b333;
+  -webkit-transition: 0.2s ease left;
+  transition: 0.2s ease left;
+}
+
+.footer_column li a:hover::before {
+  left: 0;
+}
+
+.footer_column li a:hover {
+  color: #09b333;
+}
+
+.copyright_container {
+  border-top: 1px solid white;
+  text-align: center;
+  background: linear-gradient(65deg, #180118, #270427, #180118);
+  color: white;
+  padding: 10px;
+}
+/*# sourceMappingURL=Footer.css.map */

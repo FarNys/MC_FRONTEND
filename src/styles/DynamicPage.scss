@@ -1,0 +1,101 @@
+.dynamicpage_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  flex-direction: column;
+  margin-top: 40px;
+  flex-wrap: wrap;
+
+  h1 {
+    margin-top: 10px;
+    font-family: "Overlock SC", cursive;
+  }
+  a {
+    text-decoration: none;
+    padding: 9px 25px;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(65deg, #c33764, #1d2671);
+    border: 1px solid transparent;
+    font-weight: 600;
+    transition: 0.2s linear all;
+    &:hover {
+      transition: 0.2s linear all;
+      color: #c33764;
+      border: 1px solid #c33764;
+      background: transparent;
+    }
+  }
+}
+.dynamic_card_container {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  .dynamic_left_side {
+    flex: 1;
+    align-self: stretch;
+    margin-right: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .dynamic_right_side {
+    // background: url("../components/webb.png");
+    background: linear-gradient(65deg, #1d2671, #1d26cc);
+    // background-position: center;
+    // background-repeat: repeat;
+    border: 1px solid gray;
+    flex: 1;
+    align-self: stretch;
+    color: #cfcfcf;
+    h3 {
+      margin: 10px auto;
+      text-align: center;
+      width: fit-content;
+      color: #c33764;
+      font-size: 26px;
+    }
+    h4 {
+      display: flex;
+      width: fit-content;
+      padding: 6px;
+      font-size: 15px;
+    }
+    ul {
+      li {
+        display: flex;
+        list-style: none;
+        width: fit-content;
+        padding: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        span {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .dynamic_card_container {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    .dynamic_left_side {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .dynamic_right_side {
+      width: 100%;
+    }
+  }
+}

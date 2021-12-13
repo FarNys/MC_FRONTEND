@@ -1,0 +1,231 @@
+.review_container {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 40px auto;
+  padding: 20px 0 70px 0;
+  overflow: hidden;
+}
+
+.review_container:hover .review_button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.review_box,
+.review_parent {
+  position: relative;
+  width: 250px;
+}
+
+.review_parent {
+  width: 750px;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #180118), color-stop(30%, transparent), color-stop(40%, transparent));
+  background: linear-gradient(to bottom, #180118 30%, transparent 30%, transparent 40%);
+}
+
+.review_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.single_review_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100%;
+  border: 1px solid #ddd;
+  letter-spacing: 1px;
+  -webkit-transform: translateX(-250px);
+          transform: translateX(-250px);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.single_review_container:hover {
+  cursor: pointer;
+  background-color: #180118;
+  color: #ddd;
+}
+
+.single_review_container:hover .socialmedia_icon_whatssapp {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  color: #20b820;
+}
+
+.single_review_container:hover .socialmedia_icon_twitter {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  color: #47aedd;
+}
+
+.single_review_container .review_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 30px;
+  background-color: #180118;
+}
+
+.single_review_container .review_top .review_images {
+  width: 100px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 3px;
+  margin-top: 30px;
+  background-color: #ddd;
+}
+
+.single_review_container .review_bottom {
+  margin-top: 110px;
+  width: 100%;
+}
+
+.single_review_container .review_bottom h3 {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.single_review_container .review_bottom p {
+  padding: 15px;
+  font-weight: 600;
+}
+
+.review_button_container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+}
+
+.review_button_container .btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.review_button_container .btn_box button {
+  cursor: pointer;
+  background: #ddd;
+  color: #180118;
+  outline: none;
+  border: none;
+  padding: 4px;
+  border-radius: 50%;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.review_button_container .btn_box button:hover {
+  background-color: #180118;
+  color: #ddd;
+}
+
+.review_button_container .btn_box button:active {
+  -webkit-transform: scale(1.45);
+          transform: scale(1.45);
+}
+
+.review_socialmedia {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 30px;
+  left: 20px;
+}
+
+.socialmedia_icon_whatssapp {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: 0.3s ease transform;
+  transition: 0.3s ease transform;
+}
+
+.socialmedia_icon_whatssapp:hover {
+  opacity: 0.7;
+}
+
+.socialmedia_icon_twitter {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: 0.3s ease transform;
+  transition: 0.3s ease transform;
+}
+
+.socialmedia_icon_twitter:hover {
+  opacity: 0.7;
+}
+/*# sourceMappingURL=Review.css.map */

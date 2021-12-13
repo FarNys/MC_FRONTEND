@@ -1,0 +1,163 @@
+@import "../index.scss";
+.create_card_container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+    clip-path: circle(90vh at 100% -20vh);
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+    clip-path: circle(60vh at 20% 100vh);
+    z-index: -1;
+  }
+  .alert_container {
+    z-index: 100;
+    // width: 200px;
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #c33764;
+    // color: #c33764;
+    top: 0;
+    h4 {
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: $color_4;
+    }
+  }
+  .alert_container.succes {
+    z-index: 100;
+    width: fit-content;
+    border-radius: 6px;
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #09b333;
+    top: 0;
+    h4 {
+      padding: 8px 12px;
+      border: none;
+      color: $color_4;
+    }
+  }
+}
+.memory_card_container {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 25%;
+  min-width: 340px;
+  margin: 40px auto;
+  height: fit-content;
+  // border: 3px solid red;
+  padding-bottom: 50px;
+  box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.4);
+  background-color: $color_4;
+  h1 {
+    font-family: $font_2;
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    width: 100%;
+    color: $color_4;
+    background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+  }
+  button {
+    background: $color_2;
+    &:hover {
+      background: lighten($color_2, 10%);
+    }
+    &:active {
+      background: lighten($color_2, 20%);
+    }
+  }
+}
+.single_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+  label {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    padding: 6px 8px;
+    width: 100%;
+    border: 1px solid $color_1;
+    outline: none;
+    font-family: $font_1;
+    font-weight: 400;
+
+    &:focus {
+      border: 1px solid $color_3;
+    }
+  }
+  span {
+    margin-left: 5px;
+  }
+}
+.icon_error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+.save_btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: $color_2;
+  color: $color_4;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  &:hover {
+    background: lighten($color_2, 10%);
+    // cursor: pointer;
+  }
+  &:active {
+    background: lighten($color_2, 20%);
+  }
+}
+.span_error {
+  color: #c33764;
+  font-size: 12px;
+  padding-top: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
