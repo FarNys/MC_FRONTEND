@@ -14,8 +14,8 @@ import ErrorPage from "./pages/ErrorPage";
 import PrivateRoute from "./routing/PrivateRoute";
 import DynamicPage from "./pages/DynamicPage";
 import Footer from "./components/Footer";
-export const baseURL = "https://deploymc.herokuapp.com";
-// export const baseURL = "https://mcard-backend.herokuapp.com/";
+// export const baseURL = "https://deploymc.herokuapp.com";
+export const baseURL = "https://mcard-backend.herokuapp.com";
 function App() {
   const dispatch = useDispatch();
   const loginState = useSelector(selectLogin);
