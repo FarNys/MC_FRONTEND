@@ -16,6 +16,20 @@ body {
 }
 
 /* #c33764 → #1d2671 */
+.loader_container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .allcard_container {
   min-height: 90vh;
   width: -webkit-fit-content;
@@ -190,6 +204,14 @@ body {
 .allcard_container ul {
   margin-top: 10px;
   margin-left: 20px;
+}
+
+.allcard_container ul li {
+  color: #fefefe;
+}
+
+.allcard_container ul li h3 {
+  color: #fefefe;
 }
 
 .allcard_container .option_container {

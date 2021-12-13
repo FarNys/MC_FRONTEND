@@ -16,6 +16,20 @@ body {
 }
 
 /* #c33764 → #1d2671 */
+.loader_container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .memory_card_container_edit {
   position: fixed;
   top: 50%;
@@ -41,7 +55,7 @@ body {
   margin-top: 50px;
   -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
-  background-color: white;
+  background-color: #fefefe;
 }
 
 .memory_card_container_edit h1 {
@@ -50,7 +64,7 @@ body {
   padding: 20px;
   font-size: 22px;
   width: 100%;
-  color: white;
+  color: #fefefe;
   background: linear-gradient(65deg, #020024, #090979, #00d4ff);
 }
 
@@ -104,7 +118,7 @@ body {
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  color: white;
+  color: #fefefe;
   border: none;
   outline: none;
   font-size: 16px;
@@ -148,7 +162,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 6px;
-  background-color: white;
+  background-color: #fefefe;
   color: #09b333;
   border: 2px solid #09b333;
 }
