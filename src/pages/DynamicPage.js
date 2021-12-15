@@ -5,6 +5,7 @@ import "../styles/DynamicPage.css";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import NotesIcon from "@material-ui/icons/Notes";
 import Loader from "react-js-loader";
+import { baseURL } from "../App";
 import {
   setCurrentData,
   selectDynamicData,
@@ -23,7 +24,7 @@ const DynamicPage = () => {
     setloading(true);
     async function getCard() {
       try {
-        const res = await fetch(`http://localhost:5000/allcards/${id}`, {
+        const res = await fetch(`${baseURL}/${id}`, {
           method: "GET",
           headers: {
             "x-auth-token": localStorage.getItem("token"),
