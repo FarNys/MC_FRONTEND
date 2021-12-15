@@ -24,7 +24,7 @@ const DynamicPage = () => {
     setloading(true);
     async function getCard() {
       try {
-        const res = await fetch(`${baseURL}/${id}`, {
+        const res = await fetch(`${baseURL}/allcards/${id}`, {
           method: "GET",
           headers: {
             "x-auth-token": localStorage.getItem("token"),
