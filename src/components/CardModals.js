@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { Fade } from "react-reveal";
 import { baseURL } from "../App";
 import Loader from "react-js-loader";
+import ClearIcon from "@material-ui/icons/Clear";
 
 const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
   const [success, setsuccess] = useState(false);
@@ -75,6 +76,7 @@ const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
         )}
       </div>
       <form className="memory_card_container_edit" type="submit">
+        <ClearIcon className="close_icon" onClick={() => setisOpen(false)} />
         <h1>Edit Your Card</h1>
         <div className="single_container">
           <label htmlFor="title">Title </label>
@@ -91,7 +93,13 @@ const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
         </div>{" "}
         <div className="single_container">
           <label htmlFor="image">Image </label>
-          <input type="text" name="image" onChange={onChange} value={image} />
+          <input
+            type="text"
+            name="image"
+            onChange={onChange}
+            value={image}
+            disabled
+          />
         </div>{" "}
         <div className="single_container">
           <label htmlFor="extra">Extra</label>
@@ -101,13 +109,6 @@ const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
           <label htmlFor="extra2">Extra2</label>
           <input type="text" name="extra2" value={extra2} onChange={onChange} />
         </div>
-        {/* {loading ? (
-          <LoaderButton />
-        ) : (
-          <button className="save_btn" onClick={updateHandler} type="submit">
-            Update Card
-          </button>
-        )} */}
         {loading ? (
           <div className="loader_container">
             <Loader

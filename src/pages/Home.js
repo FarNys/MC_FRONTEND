@@ -97,11 +97,11 @@ const Home = () => {
       <div className="mid_container_part_one two">
         <h1>UI</h1>
         <div className="spec_container">
-          <a href="https://reactjs.org/" className="spec_items_icons">
+          <a href="https://sass-lang.com/" className="spec_items_icons">
             <h4>Sass</h4>
             <DiSass className="icon_home" />
           </a>
-          <a href="https://redux.js.org/" className="spec_items_icons">
+          <a href="https://mui.com/" className="spec_items_icons">
             <h4>Material UI</h4>
             <svg
               className="icon_home"
@@ -118,7 +118,11 @@ const Home = () => {
               ></path>
             </svg>
           </a>
-          <a href="https://nodejs.org/en/" className="spec_items_icons">
+          <a
+            href="https://react-icons.github.io/react-icons/"
+            className="spec_items_icons"
+          >
+            {" "}
             <h4>React Icons</h4>
             <svg
               className="icon_home"
@@ -164,19 +168,16 @@ const Home = () => {
               ></path>
             </svg>
           </a>
-          <a href="https://www.mongodb.com/" className="spec_items_icons">
+          <a
+            href="https://react-slick.neostack.com/"
+            className="spec_items_icons"
+          >
             <h4>React-Slick</h4>
             <MdViewCarousel className="icon_home" />
           </a>
         </div>
       </div>
-      {/* <div className="mid_container_part_one">
-        <FaReact />
-        <FaNodeJs />
-        <DiMongodb />
-        <DiHeroku />
-      </div> */}
-      {/* <Review /> */}
+
       <LoginComp />
       <ReceiveReview />
       <SendReview />

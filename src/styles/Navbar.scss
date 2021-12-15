@@ -1,4 +1,15 @@
 @import "../index.scss";
+.welcome_container {
+  padding: 8px;
+  text-align: center;
+  font-family: $font_2;
+  color: $color_1;
+  background-color: $color_4;
+  span {
+    font-family: $font_1;
+    color: $color_3;
+  }
+}
 .navbar_container {
   display: flex;
   height: 60px;
@@ -76,7 +87,7 @@
 }
 @media (max-width: 600px) {
   .navbar_container {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
     // max-width: 320px;
   }
 }

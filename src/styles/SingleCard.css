@@ -391,6 +391,13 @@ body {
   .singlecard_container {
     margin: 10px auto;
   }
+  .allcard_container_stats {
+    margin: auto !important;
+    width: 90%;
+  }
+  .stats_container {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1293px) {

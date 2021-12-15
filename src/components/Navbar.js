@@ -30,38 +30,45 @@ const Navbar = () => {
     history.push("/");
   };
   return (
-    <div className="navbar_container">
-      <div className="nav_left">
-        <Link to="/">Logo</Link>
-      </div>
+    <div className="navbar_parent">
       {isLogin && (
-        <div className="nav_center">
-          {/* <li>
-            <Link to="/">Home</Link>
-          </li> */}
-          <li>
-            <Link to="/create">Create</Link>
-          </li>
-          <li>
-            <Link to="/allcards">All Cards</Link>
-          </li>
-          <li>
-            <Link to="/wishlist">Wishlist</Link>
-          </li>
+        <div className="welcome_container">
+          Welcome <span>{userName}</span>
         </div>
       )}
+      <div className="navbar_container">
+        <div className="nav_left">
+          <Link to="/">Logo</Link>
+        </div>
+        {isLogin && (
+          <div className="nav_center">
+            {/* <li>
+            <Link to="/">Home</Link>
+          </li> */}
+            <li>
+              <Link to="/create">Create</Link>
+            </li>
+            <li>
+              <Link to="/allcards">All Cards</Link>
+            </li>
+            <li>
+              <Link to="/wishlist">Wishlist</Link>
+            </li>
+          </div>
+        )}
 
-      <div className="nav_right">
-        <li>
-          {isLogin ? (
-            <div className="user_logout">
-              <p>{`${userName}`}</p>
-              <button onClick={logoutHandler}>Log out</button>
-            </div>
-          ) : (
-            <Link to="/register">Register</Link>
-          )}
-        </li>
+        <div className="nav_right">
+          <li>
+            {isLogin ? (
+              <div className="user_logout">
+                <p>{`${userName}`}</p>
+                <button onClick={logoutHandler}>Log out</button>
+              </div>
+            ) : (
+              <Link to="/register">Register</Link>
+            )}
+          </li>
+        </div>
       </div>
     </div>
   );

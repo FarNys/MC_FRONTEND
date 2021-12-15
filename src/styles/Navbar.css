@@ -30,6 +30,19 @@ body {
           align-items: center;
 }
 
+.welcome_container {
+  padding: 8px;
+  text-align: center;
+  font-family: "Carrois Gothic SC", sans-serif;
+  color: #020024;
+  background-color: #fefefe;
+}
+
+.welcome_container span {
+  font-family: "Readex Pro", sans-serif;
+  color: #00d4ff;
+}
+
 .navbar_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,7 +153,7 @@ body {
 
 @media (max-width: 600px) {
   .navbar_container {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
   }
 }
 /*# sourceMappingURL=Navbar.css.map */

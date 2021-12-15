@@ -80,7 +80,11 @@ const SingleCard = ({ item }) => {
         <div className="singlecard_bottom">
           <div className="wish_btn_container">
             <button className="wishlist_icon" onClick={() => wishHandler(item)}>
-              <FavoriteIcon className={item.isWishList && "icon_yellow"} />
+              <FavoriteIcon
+                className={
+                  item.isWishList ? "icon_yellow" : "icon_no_className"
+                }
+              />
             </button>
 
             <button onClick={() => deleteHandler(item)}>

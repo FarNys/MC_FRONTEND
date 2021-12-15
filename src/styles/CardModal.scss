@@ -20,6 +20,7 @@
     padding: 20px;
     font-size: 22px;
     width: 100%;
+    margin-top: 10px;
     color: $color_4;
     background: linear-gradient(65deg, $color_1, $color_2, $color_3);
   }
@@ -52,6 +53,23 @@
   }
   span {
     margin-left: 5px;
+  }
+}
+.close_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  position: absolute;
+  color: #c33764;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+  }
+  &:active {
+    transform: scale(0.98);
   }
 }
 .save_btn {

@@ -6,6 +6,13 @@ import { addReview, selectReviews } from "../features/reviewsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { baseURL } from "../App";
 const SendReview = () => {
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
   const dispatch = useDispatch();
   const [loading, setloading] = useState(false);
   const reviewsSelect = useSelector(selectReviews);
@@ -36,6 +43,22 @@ const SendReview = () => {
 
   const sendReviewHandler = async (e) => {
     e.preventDefault();
+    if (
+      reviews.name === "" ||
+      reviews.job === "" ||
+      reviews.mail === "" ||
+      reviews.desc === ""
+    ) {
+      setfailAlert({ failState: true, failMsg: "Fill All Fields!" });
+      setTimeout(() => {
+        setfailAlert({ ...failAlert, failState: false });
+      }, 3000);
+    } else if (validateEmail(reviews.mail) === null) {
+      setfailAlert({ failState: true, failMsg: "Need a valid Email!" });
+      setTimeout(() => {
+        setfailAlert({ ...failAlert, failState: false });
+      }, 3000);
+    }
     try {
       if (
         reviews.name !== "" &&
