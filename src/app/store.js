@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import cardReducer from "../features/cardSlice";
 import userReducer from "../features/userSlice";
 import reviewReducer from "../features/reviewsSlice";
-import dynamicReducer from "../features/dynamicData";
+import dynamicReducer from "../features/dynamicSlice";
 
 export const store = configureStore({
   reducer: {
