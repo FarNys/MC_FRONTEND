@@ -71,7 +71,7 @@ const ReceiveReview = () => {
         <Slider {...settings}>
           {receiveReviews.length > 0 &&
             receiveReviews
-              .splice(receiveReviews.length - 15, receiveReviews.length)
+              .slice(receiveReviews.length - 12, receiveReviews.length)
               .map((el) => (
                 <div
                   className="carousel_item"

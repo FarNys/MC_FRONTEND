@@ -32,7 +32,6 @@ const Footer = () => {
           </li>
         </div>
       </div>
-      <div className="copyright_container">Copyright</div>
     </>
   );
 };
