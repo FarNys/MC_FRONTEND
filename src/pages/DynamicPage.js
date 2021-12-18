@@ -11,7 +11,7 @@ import {
   selectDynamicData,
   changeToArr,
   selectAllFields,
-} from "../features/dynamicSlice";
+} from "../features/dynamicData";
 const DynamicPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -58,107 +58,119 @@ const DynamicPage = () => {
     setloading(false);
   }, [id, dispatch]);
 
-  if (loading) {
-    return (
-      <div className="loader_container">
-        <Loader
-          type="bubble-loop"
-          bgColor={"#c33764"}
-          color={"#c33764"}
-          size={50}
-        />
-      </div>
-    );
-  }
-  if (!cardData) {
-    return (
-      <div className="loader_container">
-        <Loader
-          type="bubble-loop"
-          bgColor={"#c33764"}
-          color={"#c33764"}
-          size={50}
-        />
-      </div>
-    );
-  } else {
-    return (
-      <div className="dynamicpage_container">
-        <div className="image_one image_one_one">
-          <img
-            src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
-            alt=""
+  // if (loading) {
+  //   return (
+  //     <div className="loader_container">
+  //       <Loader
+  //         type="bubble-loop"
+  //         bgColor={"#c33764"}
+  //         color={"#c33764"}
+  //         size={50}
+  //       />
+  //     </div>
+  //   );
+  // }
+  // if (!cardData) {
+  //   return (
+  //     <div className="loader_container">
+  //       <Loader
+  //         type="bubble-loop"
+  //         bgColor={"#c33764"}
+  //         color={"#c33764"}
+  //         size={50}
+  //       />
+  //     </div>
+  //   );
+  // }
+  // else {
+  return (
+    <div className="dynamicpage_container">
+      {loading || !cardData ? (
+        <div className="loader_container">
+          <Loader
+            type="bubble-loop"
+            bgColor={"#c33764"}
+            color={"#c33764"}
+            size={50}
           />
         </div>
-        <div className="image_one image_one_two">
-          <img
-            src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
-            alt=""
-          />
-        </div>
-        <div className="image_one image_one_three">
-          <img
-            src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
-            alt=""
-          />
-        </div>
-        <div className="image_one image_one_four">
-          <img
-            src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
-            alt=""
-          />
-        </div>
-        <div
-          className="dynamic_card_box"
-          // style={{ backgroundImage: "url(/images/dynamic.jpg)" }}
-        >
-          <h1>{cardData.title}</h1>
+      ) : (
+        <>
+          {/* <div className="image_one image_one_one">
+            <img
+              src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
+              alt=""
+            />
+          </div>
+          <div className="image_one image_one_two">
+            <img
+              src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
+              alt=""
+            />
+          </div> */}
+          {/* <div className="image_one image_one_three">
+            <img
+              src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
+              alt=""
+            />
+          </div>
+          <div className="image_one image_one_four">
+            <img
+              src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt9d192b3cf0136b40/5f32b37c9751e50576cbbdd3/particle-medium-blue.svg"
+              alt=""
+            />
+          </div> */}
+          <div className="dynamic_card_box">
+            <h1>{cardData.title}</h1>
 
-          <div className="dynamic_card_container">
-            <div className="dynamic_left_side">
-              <img src={cardData.image} alt={cardData.title} />
-            </div>
-            <div className="dynamic_right_side">
-              {/* <h3>{cardData.title.toUpperCase()}</h3> */}
-              <h4>
-                <NotesIcon style={{ color: "#c33764" }} />
-                {cardData.description}
-              </h4>
-              <ul>
-                {cardData.extra && (
-                  <li>
-                    <DoubleArrowIcon style={{ color: "#c33764" }} />
-                    {cardData.extra}
-                  </li>
-                )}
-                {cardData.extra2 && (
-                  <li>
-                    <DoubleArrowIcon style={{ color: "#c33764" }} />
-                    {cardData.extra2}
-                  </li>
-                )}
-
-                {fieldsData.length > 0 &&
-                  fieldsData.map((el) => (
-                    <li key={el.id}>
+            <div className="dynamic_card_container">
+              <div className="dynamic_left_side">
+                <img src={cardData.image} alt={cardData.title} />
+              </div>
+              <div className="dynamic_right_side">
+                {/* <h3>{cardData.title.toUpperCase()}</h3> */}
+                <h4>
+                  <NotesIcon style={{ color: "#c33764" }} />
+                  {cardData.description}
+                </h4>
+                <ul>
+                  {cardData.extra && (
+                    <li>
                       <DoubleArrowIcon style={{ color: "#c33764" }} />
-                      <span>{el.element}</span>
+                      {cardData.extra}
                     </li>
-                  ))}
-                {cardData.mytimestamp && (
-                  <li>
-                    <DoubleArrowIcon style={{ color: "#c33764" }} />
-                    <span>Created At : {createdTime}</span>
-                  </li>
-                )}
-              </ul>
+                  )}
+                  {cardData.extra2 && (
+                    <li>
+                      <DoubleArrowIcon style={{ color: "#c33764" }} />
+                      {cardData.extra2}
+                    </li>
+                  )}
+
+                  {fieldsData.length > 0 &&
+                    fieldsData.map((el) => (
+                      <li key={el.id}>
+                        <DoubleArrowIcon style={{ color: "#c33764" }} />
+                        <span>{el.element}</span>
+                      </li>
+                    ))}
+                  {cardData.mytimestamp && (
+                    <li>
+                      <DoubleArrowIcon style={{ color: "#c33764" }} />
+                      <span>Created At : {createdTime}</span>
+                    </li>
+                  )}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <Link to="/">Home</Link>
-      </div>
-    );
-  }
+        </>
+      )}
+
+      <Link to="/">Home</Link>
+    </div>
+  );
+  // }
 };
 
 export default DynamicPage;

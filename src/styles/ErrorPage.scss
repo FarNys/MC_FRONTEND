@@ -1,0 +1,13 @@
+@import "../index.scss";
+.error_page_ocntainer {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+  h1 {
+    color: $color_4;
+    padding: 1rem;
+  }
+}

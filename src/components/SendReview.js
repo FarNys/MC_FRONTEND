@@ -16,7 +16,7 @@ const SendReview = () => {
   const dispatch = useDispatch();
   const [loading, setloading] = useState(false);
   const reviewsSelect = useSelector(selectReviews);
-  console.log(reviewsSelect);
+
   const [failAlert, setfailAlert] = useState({
     failState: false,
     failMsg: "Review with this email already exists",
@@ -42,7 +42,13 @@ const SendReview = () => {
   console.log(reviews);
 
   const sendReviewHandler = async (e) => {
-    e.preventDefault();
+    // if (validateEmail(reviews.mail) === null) {
+    //   setfailAlert({ failState: true, failMsg: "Enter a valid mail" });
+    //   setTimeout(() => {
+    //     setfailAlert({ ...failAlert, failState: false });
+    //   }, 3000);
+    // }
+    console.log(validateEmail(reviews.mail));
     if (
       reviews.name === "" ||
       reviews.job === "" ||
@@ -59,12 +65,14 @@ const SendReview = () => {
         setfailAlert({ ...failAlert, failState: false });
       }, 3000);
     }
+    e.preventDefault();
     try {
       if (
         reviews.name !== "" &&
         reviews.job !== "" &&
         reviews.mail !== "" &&
-        reviews.desc !== ""
+        reviews.desc !== "" &&
+        validateEmail(reviews.mail) !== null
       ) {
         setloading(true);
         const res = await fetch(`${baseURL}/reviews`, {
@@ -76,10 +84,11 @@ const SendReview = () => {
             review: reviews,
           }),
         });
+
         const data = await res.json();
         console.log(data.review);
-        dispatch(addReview({ newReview: data.review }));
         if (data.review) {
+          dispatch(addReview({ newReview: data.review }));
           setsuccessAlert({ ...successAlert, successState: true });
           reviews.name = "";
           reviews.job = "";
@@ -92,8 +101,11 @@ const SendReview = () => {
           }, 3000);
         }
         if (data.msg) {
-          setfailAlert({ ...failAlert, failState: true });
-          console.log(failAlert);
+          setfailAlert({
+            failMsg: "Review with this email already exists",
+            failState: true,
+          });
+
           setTimeout(() => {
             setfailAlert({ ...failAlert, failState: false });
             console.log(failAlert);

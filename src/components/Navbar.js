@@ -61,7 +61,6 @@ const Navbar = () => {
           <li>
             {isLogin ? (
               <div className="user_logout">
-                <p>{`${userName}`}</p>
                 <button onClick={logoutHandler}>Log out</button>
               </div>
             ) : (

@@ -8,7 +8,7 @@
   background: linear-gradient(65deg, #180118, #270427, #180118);
 }
 .footer_column {
-  margin: 10px;
+  margin: 20px;
   h4 {
     margin-bottom: 10px;
     color: #09b333;
@@ -47,4 +47,9 @@
   background: linear-gradient(65deg, #180118, #270427, #180118);
   color: white;
   padding: 10px;
+}
+@media (max-width: 360px) {
+  .footer_container {
+    display: none;
+  }
 }

@@ -1,0 +1,22 @@
+@import "../index.scss";
+.footer_mobile_accordion {
+  background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+  li {
+    list-style: none;
+    margin-top: 10px;
+    a {
+      text-decoration: none;
+      color: $color_4;
+      font-family: $font_1;
+      &:hover {
+        color: #09b333;
+      }
+    }
+  }
+}
+
+@media (min-width: 361px) {
+  .footer_mobile_container {
+    display: none;
+  }
+}

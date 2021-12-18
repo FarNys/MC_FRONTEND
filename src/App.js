@@ -14,6 +14,7 @@ import ErrorPage from "./pages/ErrorPage";
 import PrivateRoute from "./routing/PrivateRoute";
 import DynamicPage from "./pages/DynamicPage";
 import Footer from "./components/Footer";
+import FooterMobile from "./components/FooterMobile";
 // export const baseURL = "https://deploymc.herokuapp.com";
 export const baseURL = "https://mcard-backend.herokuapp.com";
 function App() {
@@ -60,6 +61,7 @@ function App() {
           <Route path="*" component={ErrorPage} />
         </Switch>
         <Footer />
+        <FooterMobile />
       </BrowserRouter>
     </div>
   );
