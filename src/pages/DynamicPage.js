@@ -11,7 +11,7 @@ import {
   selectDynamicData,
   changeToArr,
   selectAllFields,
-} from "../features/dynamicData";
+} from "../features/dynamicSlice";
 const DynamicPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
