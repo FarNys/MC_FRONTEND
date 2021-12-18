@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Carrois Gothic SC", sans-serif;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
+.loader_container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_mobile_accordion {
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+}
+
+.footer_mobile_accordion li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer_mobile_accordion li a {
+  text-decoration: none;
+  color: #fefefe;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.footer_mobile_accordion li a:hover {
+  color: #09b333;
+}
+
+@media (min-width: 361px) {
+  .footer_mobile_container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=FooterMobile.css.map */

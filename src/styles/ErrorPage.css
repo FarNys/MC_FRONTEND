@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Carrois Gothic SC", sans-serif;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
+.loader_container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.error_page_ocntainer {
+  min-height: calc(100vh - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+}
+
+.error_page_ocntainer h1 {
+  color: #fefefe;
+  padding: 1rem;
+}
+/*# sourceMappingURL=ErrorPage.css.map */
