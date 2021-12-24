@@ -5,7 +5,7 @@
   align-items: flex-start;
   width: 100%;
   border-top: 1px solid #1d2671;
-  background: linear-gradient(65deg, $color_1, $color_2);
+  background-color: $color_5;
 }
 .footer_column {
   margin: 20px;
@@ -19,7 +19,7 @@
     padding: 5px;
     a {
       text-decoration: none;
-      color: #ccc;
+      color: $color_1;
       font-weight: 600;
       position: relative;
       &::before {
@@ -29,7 +29,7 @@
         bottom: -5%;
         height: 3px;
         width: 100%;
-        background-color: $color_5;
+        background-color: $color_1;
         transition: 0.2s ease left;
       }
       &:hover::before {

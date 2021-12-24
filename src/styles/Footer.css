@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@500&family=Gurajada&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
 * {
   margin: 0;
@@ -42,7 +42,7 @@ body {
           align-items: flex-start;
   width: 100%;
   border-top: 1px solid #1d2671;
-  background: linear-gradient(65deg, #020024, #090979);
+  background-color: #d3d3d3;
 }
 
 .footer_column {
@@ -62,7 +62,7 @@ body {
 
 .footer_column li a {
   text-decoration: none;
-  color: #ccc;
+  color: #020024;
   font-weight: 600;
   position: relative;
 }
@@ -74,7 +74,7 @@ body {
   bottom: -5%;
   height: 3px;
   width: 100%;
-  background-color: #d3d3d3;
+  background-color: #020024;
   -webkit-transition: 0.2s ease left;
   transition: 0.2s ease left;
 }

@@ -59,15 +59,9 @@ const Register = () => {
           }),
         });
         const data = await result.json();
-        if (data.errors) {
-          setalert({ state: true, msg: "Something is wrong. Try later!" });
-          setTimeout(() => {
-            setalert({ state: false, msg: "" });
-          }, 3000);
-        } else {
-          localStorage.setItem("token", data.token);
-          history.push("/login");
-        }
+
+        localStorage.setItem("token", data.token);
+        history.push("/login");
       } catch (error) {
         setalert({ state: true, msg: error });
         setTimeout(() => {

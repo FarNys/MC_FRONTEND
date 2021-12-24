@@ -36,7 +36,7 @@ const Login = () => {
     if (user.email && user.password) {
       setloading(true);
       try {
-        const res = await fetch(`h${baseURL}/login`, {
+        const res = await fetch(`${baseURL}/login`, {
           method: "POST",
           headers: {
             "x-auth-token": localStorage.getItem("token"),
