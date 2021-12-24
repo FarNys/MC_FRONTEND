@@ -31,15 +31,11 @@
     font-family: $font_1;
     color: $color_1;
     // width: 100%;
-    li {
-      list-style: none;
-      width: fit-content;
+
+    a {
+      text-decoration: none;
+      color: $color_3;
       border-bottom: 1px solid $color_3;
-      padding: 0 5px;
-      a {
-        text-decoration: none;
-        color: $color_3;
-      }
     }
   }
   h3 {

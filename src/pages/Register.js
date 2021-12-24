@@ -60,7 +60,7 @@ const Register = () => {
         });
         const data = await result.json();
         if (data.errors) {
-          setalert({ state: true, msg: data.errors[0].msg });
+          setalert({ state: true, msg: "Something is wrong. Try later!" });
           setTimeout(() => {
             setalert({ state: false, msg: "" });
           }, 3000);
@@ -122,10 +122,7 @@ const Register = () => {
           </button>
         </form>
         <div className="under_creat_account">
-          If You Have Already an Account{" "}
-          <li>
-            <Link to="/login">Click</Link>
-          </li>
+          If You Have Already an Account <Link to="/login">Click</Link>
           here
         </div>
       </div>
