@@ -64,7 +64,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 50px auto;
+  margin: 80px auto;
 }
 
 .receivieReview_container .receive_items .slick-arrow {
