@@ -29,14 +29,14 @@
         bottom: -5%;
         height: 3px;
         width: 100%;
-        background-color: $color_1;
+        background-color: $color_5;
         transition: 0.2s ease left;
       }
       &:hover::before {
         left: 0;
       }
       &:hover {
-        color: $color_1;
+        color: $color_5;
       }
     }
   }

@@ -74,7 +74,7 @@ body {
   bottom: -5%;
   height: 3px;
   width: 100%;
-  background-color: #020024;
+  background-color: #d3d3d3;
   -webkit-transition: 0.2s ease left;
   transition: 0.2s ease left;
 }
@@ -84,7 +84,7 @@ body {
 }
 
 .footer_column li a:hover {
-  color: #020024;
+  color: #d3d3d3;
 }
 
 .copyright_container {

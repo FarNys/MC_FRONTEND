@@ -46,7 +46,7 @@ body {
 }
 
 .footer_mobile_accordion li a:hover {
-  color: #09b333;
+  color: #d3d3d3;
 }
 
 @media (min-width: 361px) {

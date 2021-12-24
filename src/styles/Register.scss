@@ -10,7 +10,8 @@
   display: flex;
   margin: 0 auto;
   flex-direction: column;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 4px 2px $color_3;
