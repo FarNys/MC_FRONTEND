@@ -5,13 +5,13 @@
   align-items: flex-start;
   width: 100%;
   border-top: 1px solid #1d2671;
-  background-color: $color_4;
+  background-color: $color_1;
 }
 .footer_column {
   margin: 20px;
   h4 {
     margin-bottom: 10px;
-    color: $color_1;
+    color: $color_4;
   }
   li {
     list-style: none;
@@ -19,7 +19,7 @@
     padding: 5px;
     a {
       text-decoration: none;
-      color: $color_2;
+      color: $color_5;
       font-weight: 600;
       position: relative;
       &::before {

@@ -42,7 +42,7 @@ body {
           align-items: flex-start;
   width: 100%;
   border-top: 1px solid #1d2671;
-  background-color: #fefefe;
+  background-color: #020024;
 }
 
 .footer_column {
@@ -51,7 +51,7 @@ body {
 
 .footer_column h4 {
   margin-bottom: 10px;
-  color: #020024;
+  color: #fefefe;
 }
 
 .footer_column li {
@@ -62,7 +62,7 @@ body {
 
 .footer_column li a {
   text-decoration: none;
-  color: #090979;
+  color: #d3d3d3;
   font-weight: 600;
   position: relative;
 }

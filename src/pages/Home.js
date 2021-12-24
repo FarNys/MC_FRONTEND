@@ -45,8 +45,8 @@ const Home = () => {
             <AiFillEdit className="icon_home" style={{ fontSize: 32 }} />
             <h5>Editable</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              vitae quod! Molestiae culpa pariatur ipsam.
+              After creating a card you can dit your existed card inside Allcard
+              or Wishlist Page by clicking on edit icon.
             </p>
           </div>
           <div className="spec_items">
@@ -54,18 +54,15 @@ const Home = () => {
             <AiFillFileAdd className="icon_home" style={{ fontSize: 32 }} />
             <h5>Unlimited</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              vitae quod! Molestiae culpa pariatur ipsam.
+              Do you want a memorycard collection? don't worry, you can create
+              as many as you wish.
             </p>
           </div>
           <div className="spec_items">
             {" "}
             <FaAdversal className="icon_home" style={{ fontSize: 32 }} />
             <h5>Ad Free</h5>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              vitae quod! Molestiae culpa pariatur ipsam.
-            </p>
+            <p>There is no ad or limit condition, completely free.</p>
           </div>
         </div>
       </div>

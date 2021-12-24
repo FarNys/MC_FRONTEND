@@ -391,7 +391,7 @@ body {
 
 @media (max-width: 600px) {
   .singlecard_container {
-    margin: 10px auto;
+    margin: 15px;
   }
   .allcard_container_stats {
     margin: auto !important;
@@ -425,6 +425,12 @@ body {
 @media (max-width: 850px) {
   .blobs_one {
     display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .singlecard_container {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=SingleCard.css.map */
