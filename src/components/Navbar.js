@@ -38,7 +38,7 @@ const Navbar = () => {
       )}
       <div className="navbar_container">
         <div className="nav_left">
-          <Link to="/">Logo</Link>
+          <Link to="/">Home</Link>
         </div>
         {isLogin && (
           <div className="nav_center">

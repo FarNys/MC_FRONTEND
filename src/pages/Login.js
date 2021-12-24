@@ -32,34 +32,42 @@ const Login = () => {
   //LOGIN BUTTON HANDLER FOR SEND DATA TO BACKEND
   const loginHandler = async (e) => {
     e.preventDefault();
-    setloading(true);
-    try {
-      const res = await fetch(`${baseURL}/login`, {
-        method: "POST",
-        headers: {
-          "x-auth-token": localStorage.getItem("token"),
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: user.email,
-          password: user.password,
-        }),
-      });
-      const data = await res.json();
-      console.log(data);
-      dispatch(
-        setLogin({
-          isLogin: true,
-          email: data.user.email,
-          username: data.user.name,
-        })
-      );
-      localStorage.setItem("email", data.user.email);
-      localStorage.setItem("pw", data.user.password);
-      localStorage.setItem("token", data.token);
-      setloading(false);
-      history.push("/");
-    } catch (error) {
+    e.preventDefault();
+    if (user.email && user.password) {
+      setloading(true);
+      try {
+        const res = await fetch(`h${baseURL}/login`, {
+          method: "POST",
+          headers: {
+            "x-auth-token": localStorage.getItem("token"),
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: user.email,
+            password: user.password,
+          }),
+        });
+        const data = await res.json();
+        dispatch(
+          setLogin({
+            isLogin: true,
+            email: data.user.email,
+            username: data.user.name,
+          })
+        );
+        localStorage.setItem("email", data.user.email);
+        localStorage.setItem("pw", data.user.password);
+        localStorage.setItem("token", data.token);
+        setloading(false);
+        history.push("/");
+      } catch (error) {
+        setalert(true);
+        setTimeout(() => {
+          setalert(false);
+        }, 3000);
+        setloading(false);
+      }
+    } else {
       setalert(true);
       setTimeout(() => {
         setalert(false);
@@ -88,12 +96,15 @@ const Login = () => {
         />
       ) : (
         <div className="login_container">
-          <Fade top>
-            <div className="alert_container">
-              {alert && <h4>Email Or Password is Wrong!</h4>}
-            </div>
-          </Fade>
-          <h3>Log in to your account</h3>
+          <h3>Login</h3>
+          {alert && (
+            <Fade top>
+              <div className="alert_container">
+                <h4>Email Or Password is Wrong!</h4>
+              </div>
+            </Fade>
+          )}
+
           <form>
             <label htmlFor="password">Email</label>
             <input
