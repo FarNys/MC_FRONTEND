@@ -45,8 +45,8 @@ const Home = () => {
             <AiFillEdit className="icon_home" style={{ fontSize: 32 }} />
             <h5>Editable</h5>
             <p>
-              After creating a card you can dit your existed card inside Allcard
-              or Wishlist Page by clicking on edit icon.
+              After creating a card you can edit your existed cardS inside
+              Allcard or Wishlist Page by clicking on pencil icon.
             </p>
           </div>
           <div className="spec_items">
