@@ -49,6 +49,7 @@ body {
       flex-wrap: wrap;
   width: 100%;
   background: linear-gradient(65deg, #00d4ff, #020024);
+  background-attachment: fixed;
 }
 
 .allcard_container .blobs_one {
@@ -186,6 +187,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+  background-attachment: fixed;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 30px;

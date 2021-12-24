@@ -7,28 +7,31 @@ const Footer = () => {
         <div className="footer_column">
           <h4>Web Developement</h4>
           <li>
-            <a href="#">HTML5</a>
+            <a href="https://reactjs.org/">React</a>
           </li>
           <li>
-            <a href="#">CSS</a>
+            <a href="https://sass-lang.com/">Scss</a>
           </li>
           <li>
-            <a href="#">JavaScript</a>
+            <a href="https://redux.js.org/">Redux Toolkit</a>
           </li>
           <li>
-            <a href="#">ReactJs</a>
+            <a href="https://nodejs.org/en/">NodeJs</a>
+          </li>
+          <li>
+            <a href="https://www.mongodb.com/">MongoDB</a>
           </li>
         </div>
         <div className="footer_column">
-          <h4>Machine Learning</h4>
+          <h4>Extra Resources</h4>
           <li>
-            <a href="#">Python</a>
+            <a href="https://react-slick.neostack.com/">React-Slick</a>
           </li>
           <li>
-            <a href="#">Rust</a>
+            <a href="https://mui.com/">Material UI</a>
           </li>
           <li>
-            <a href="#">Go</a>
+            <a href="https://react-icons.github.io/react-icons/">React Icons</a>
           </li>
         </div>
       </div>

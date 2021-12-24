@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   width: 100%;
   background: linear-gradient(65deg, $color_3, $color_1);
+  background-attachment: fixed;
   .blobs_one {
     position: absolute;
     width: 250px;
@@ -91,6 +92,8 @@
   .allcard_container_inner {
     display: flex;
     background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+    background-attachment: fixed;
+
     flex-wrap: wrap;
     padding: 30px;
     // margin: 10px auto;

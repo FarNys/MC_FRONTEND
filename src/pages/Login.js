@@ -32,7 +32,6 @@ const Login = () => {
   //LOGIN BUTTON HANDLER FOR SEND DATA TO BACKEND
   const loginHandler = async (e) => {
     e.preventDefault();
-    e.preventDefault();
     if (user.email && user.password) {
       setloading(true);
       try {

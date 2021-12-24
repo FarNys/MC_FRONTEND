@@ -47,7 +47,7 @@ const Register = () => {
       }, 3000);
     } else {
       try {
-        const result = await fetch(`${baseURL}`, {
+        const result = await fetch(`${baseURL}/register`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -59,9 +59,15 @@ const Register = () => {
           }),
         });
         const data = await result.json();
-
-        localStorage.setItem("token", data.token);
-        history.push("/login");
+        if (data.errors) {
+          setalert({ state: true, msg: data.errors[0].msg });
+          setTimeout(() => {
+            setalert({ state: false, msg: "" });
+          }, 3000);
+        } else {
+          localStorage.setItem("token", data.token);
+          history.push("/login");
+        }
       } catch (error) {
         setalert({ state: true, msg: error });
         setTimeout(() => {
