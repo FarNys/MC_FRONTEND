@@ -20,7 +20,7 @@ export const baseURL = "https://mcard-backend.herokuapp.com";
 function App() {
   const dispatch = useDispatch();
   const loginState = useSelector(selectLogin);
-  console.log(loginState);
+  // console.log(loginState);
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(`${baseURL}/login`, {

@@ -12,7 +12,7 @@ const Navbar = () => {
 
   //IS LOGIN WILL CHANGED TO TRUE AFTER LOGIN AND CENTER NAVBAR WILL APEAR
   const isLogin = useSelector(selectLogin);
-  console.log(isLogin);
+  // console.log(isLogin);
   const history = useHistory();
   // useEffect(()=>{
 
