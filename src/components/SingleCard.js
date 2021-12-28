@@ -38,7 +38,7 @@ const SingleCard = ({ item }) => {
         deleteId: data._id,
       })
     );
-    console.log(data, item);
+    // console.log(data, item);
   };
   const wishHandler = async (item) => {
     const res = await fetch(`${baseURL}/allcards/${item._id}`, {
@@ -60,7 +60,7 @@ const SingleCard = ({ item }) => {
         elementId: item._id,
       })
     );
-    console.log(item._id);
+    // console.log(item._id);
   };
 
   return (

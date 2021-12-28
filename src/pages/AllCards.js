@@ -31,8 +31,7 @@ const AllCards = () => {
       );
       setloading(false);
 
-      console.log(data);
-      console.log(65);
+      // console.log(data);
     };
     fetchData();
   }, [dispatch]);

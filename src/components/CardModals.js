@@ -51,7 +51,7 @@ const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
           editedCard: data,
         })
       );
-      console.log(data);
+      // console.log(data);
 
       setloading(false);
       setsuccess(true);

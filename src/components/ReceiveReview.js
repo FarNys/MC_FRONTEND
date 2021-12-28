@@ -16,7 +16,7 @@ const ReceiveReview = () => {
       try {
         const result = await fetch(`${baseURL}/reviews`);
         const data = await result.json();
-        console.log(data);
+        // console.log(data);
         dispatch(
           getAllReviews({
             reviewsData: data,
@@ -26,7 +26,7 @@ const ReceiveReview = () => {
         console.log(error);
       }
     };
-    console.log(receiveReviews);
+    // console.log(receiveReviews);
     getReviews();
   }, [dispatch]);
 

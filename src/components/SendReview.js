@@ -37,9 +37,9 @@ const SendReview = () => {
       ...reviews,
       [e.target.name]: e.target.value,
     });
-    console.log(reviews.desc.length);
+    // console.log(reviews.desc.length);
   };
-  console.log(reviews);
+  // console.log(reviews);
 
   const sendReviewHandler = async (e) => {
     // if (validateEmail(reviews.mail) === null) {
